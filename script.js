@@ -4,24 +4,22 @@
 //Crianças valem por 0,5
 
 //cria referência aos elementos manipulados pelo programa
-let inputAdultos = document.getElementById('adultos');
-let inputCriancas = document.getElementById('criancas');
-let inputDuracao = document.getElementById('duracao');
-let resultado = document.getElementById('resultado');
+let inputAdultos = document.getElementById("adultos");
+let inputCriancas = document.getElementById("criancas");
+let inputDuracao = document.getElementById("duracao");
+let resultado = document.getElementById("resultado");
 
 //Essa função executa o calculo
 function calcular() {
-    console.log('calculando....');
+    console.log("calculando....");
 
     let adultos = inputAdultos.value;
     let criancas = inputCriancas.value;
     let duracao = inputDuracao.value;
 
-    if (adultos, criancas, duracao == "") {
-        alert("Insira os valores!")
-
+    if ((adultos, criancas, duracao == "")) {
+        alert("Insira os valores!");
     } else {
-
         let qdtTotalCarne =
             carnePP(duracao) * adultos + (carnePP(duracao) / 2) * criancas;
         console.log(qdtTotalCarne);
@@ -31,9 +29,15 @@ function calcular() {
             bebidasPP(duracao) * adultos + (bebidasPP(duracao) / 2) * criancas;
         console.log(qdtTotalBebidas);
 
-        resultado.innerHTML = `<p>${Math.ceil(qdtTotalCarne/1000)}kg de Carne</p>`;
-        resultado.innerHTML += `<p>${Math.ceil(qdtTotalCerveja/355)} latas de Cerveja</p>`;
-        resultado.innerHTML += `<p>${Math.ceil(qdtTotalBebidas/2000)} garrafas de refrigerantef`;
+        resultado.innerHTML = `<p>${Math.ceil(
+      qdtTotalCarne / 1000
+    )}kg de Carne</p>`;
+        resultado.innerHTML += `<p>${Math.ceil(
+      qdtTotalCerveja / 355
+    )} latas de Cerveja</p>`;
+        resultado.innerHTML += `<p>${Math.ceil(
+      qdtTotalBebidas / 2000
+    )} garrafas de refrigerantef`;
     }
 }
 
